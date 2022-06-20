@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int a;
+	int a5, a25, a125;
+	scanf("%d", &a);
+
+	a5 = a / 5;
+	a25 = a / 25;
+	a125 = a / 125;
+	printf("%d", a5 + a25 + a125);
+	return 0;
+}
