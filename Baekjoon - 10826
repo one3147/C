@@ -1,0 +1,11 @@
+a=int(input())
+if n<2:
+    print(a)
+else:
+    x,y=0,1
+    for i in range(2,a+1):
+        x,y=y,x+y
+    print(y)
+   
+   
+Python 언제나 최고입니다.
