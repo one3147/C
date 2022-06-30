@@ -1,0 +1,9 @@
+a, b = map(int, input().split())
+m = a // b  
+cnt = c    
+while c >= b:
+    c //= b
+    cnt += c
+
+print(cnt)
+
