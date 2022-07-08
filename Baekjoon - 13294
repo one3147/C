@@ -1,0 +1,10 @@
+a = int(input())
+cnt = 0
+for x in range(1,a):
+    a //= x
+    cnt += 1
+    if(a <= 1):
+        break
+print(cnt)
+_________________
+Python 역팩토리얼
