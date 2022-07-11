@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+	int a, num[1001], num1[1001], res[1001], uc1 = 0, uc2 = 0, res1 = 0, sv = 0;
+	scanf("%d", &a);
+	for (int i = 0; i < a; i++)
+	{
+		scanf("%d", &num[i]);
+		scanf("%d", &num1[i]);
+	}
+	for (int i = 0; i < a; i++)
+	{
+		uc1 = num[i], uc2 = num1[i];
+		for (int j = 1; j <= 45000; j++)
+		{
+			res1 = uc1 % uc2;
+			if (res1 == 0)
+			{
+				sv = uc2;
+				break;
+			}
+			uc1 = uc2;
+			uc2 = res1;
+		}
+		res[i] = (num[i] * num1[i]) / sv;
+	}
+	for (int i = 0; i < a; i++)
+	{
+		printf("%d\n",res[i]);
+	}
+}
