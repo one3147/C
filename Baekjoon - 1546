@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+	float a, cnt[1001], max = 0, sum = 0;
+	scanf("%f", &a);
+	for (int i = 0; i < a; i++)
+	{
+		scanf("%f", &cnt[i]);
+		if (max < cnt[i])
+		{
+			max = cnt[i];
+		}
+	}
+	for (int i = 0; i < a; i++)
+	{
+		cnt[i] = cnt[i] / max * 100;
+		sum += cnt[i];
+	}
+	printf("%f", sum / a);
+}
