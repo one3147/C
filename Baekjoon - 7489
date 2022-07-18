@@ -1,0 +1,44 @@
+#include <stdio.h>
+ 
+int total = 1;
+int cnt = 0;
+ 
+int main()
+{
+    int n;
+    int tCase;
+    int i = 1;
+    int tmp;
+ 
+    scanf("%d", &tCase);
+ 
+    while(tCase--)
+    {
+        scanf("%d", &n);
+    
+        while (n >= i)
+        {
+            total = total * i;
+            i++;
+ 
+            while (total % 10 == 0)
+            {
+                cnt++;
+                total = total / 10;
+            }
+ 
+            if (total >= 100000)
+            {
+                tmp = total / 100000;
+                tmp = tmp * 100000;
+                total = total - tmp;
+            }
+        }
+ 
+        printf("%d\n", total % 10);
+        total = 1;
+        i = 1;
+    }
+ 
+    return 0;
+}
